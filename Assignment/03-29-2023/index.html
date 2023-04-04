@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <h1>Assignment | 29 March 2023</h1>
+    <ol>
+        <li>Experiment with topics of today's class.</li>
+        <li>try lexical scoping with 3 to 4 inside function with parmeterized and non parameterized function</li>
+    </ol>
+
+
+    <script>
+        
+// code snippet 1
+function firstName(fn){
+  return function lastName(){
+    let ln = "singh";
+    return fn+ln;
+  }
+}("shweta");
+
+// code snippet 2
+function firstName(fn){
+  return function lastName(){
+    let ln = "singh";
+    return fn+ln;
+  }
+}
+console.log(firstName("shweta"));
+
+
+// code snippet 3
+function firstName(fn){
+  return function lastName(){
+    let ln = "singh";
+    return console.log(fn+ln);
+  }
+}
+console.log(firstName("shweta"));
+
+
+// code snippet 4
+function firstName(fn){
+  return function lastName(){
+    let ln = "singh";
+   console.log(fn+ln);
+  }
+
+}
+console.log(firstName("shweta"));
+// ================================same output - function :lastName
+
+
+// code snippet 5
+function firstName(fn){
+  return function lastName(){
+    let ln = "singh";
+    return console.log(fn+ln);
+  }
+}
+console.log(firstName("shweta")());
+
+
+// code snippet 6
+function firstName(fn){
+  return function lastName(){
+    let ln = "singh";
+   console.log(fn+ln);
+  }
+}
+console.log(firstName("shweta")());
+
+
+// code snippet 7
+function firstName(fn){
+  return function lastName(){
+    let ln = "singh";
+    console.log(fn+ln);
+  }
+}
+const fistn= firstName("shweta");
+console.log(fistn());
+
+
+// code snippet 8
+function firstName(fn){
+  console.log(fn);
+  return function lastName(){
+    console.log("lastname");
+    let ln = "singh";
+    return console.log(fn+ln);
+  }
+}
+console.log(firstName("shweta")());
+
+
+
+// code snippet 9
+function firstName(fn){
+  console.log("fnfunct",fn);
+  return function lastName(){
+    let ln = "singh";
+    console.log("lastname",ln);
+    console.log(fn+ln);
+    return function dobfunct(){
+      let dob = "03012000";
+      console.log("dob fnction",dob);
+      console.log(fn+ln+dob);
+      return function cllgfunct(){
+        console.log("mmm");
+        console.log(fn+ln+dob+"mmm1");
+        return fn+ln+dob+"mmm";
+      }
+    }
+  }
+}
+console.log(firstName("shweta")()()());
+
+
+// const fistn= firstName("shweta1");
+// console.log(fistn());
+
+
+
+// code snippet 10
+function firstName(fn){
+  console.log(fn);
+  return function lastName(){
+    console.log("lastname");
+    let ln = "singh";
+    return fn+ln;
+  }
+}
+console.log(firstName("shweta")());
+
+
+
+// code snippet 11
+function fishes(){
+  let fish = "fish";
+  console.log(fish);
+  function aqua(){
+    let aquaman = "aquaman";
+    console.log(aquaman);
+    function orms(){
+      let ormsmarius = "orm marius"
+      console.log(ormsmarius);
+    }
+    orms();
+  }
+  aqua();
+}
+fishes()
+
+
+
+// code snipppet 12
+function fishes(){
+  let fish = "fish";
+  console.log(fish);
+  function aqua(){
+    let aquaman = "aquaman";
+    console.log(aquaman);
+    function orms(){
+      let ormsmarius = "orm marius"
+      console.log(ormsmarius);
+    }
+  }
+  // orms();
+  aqua()
+  aqua()();
+}
+fishes()
+// ==========it showing error
+
+
+    </script>
+</body>
+</html>

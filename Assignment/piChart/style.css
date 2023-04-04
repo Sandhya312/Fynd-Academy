@@ -1,0 +1,31 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  *{
+    margin:0;
+    padding:0;
+  }
+  
+  body{
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .circle{
+    border-radius: 50%;
+    background-color: red;
+    background-image: conic-gradient( from 90deg,
+       violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red
+    );
+    height: 200px;
+    width:200px;
+  }

@@ -1,0 +1,104 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+  
+  .ball{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color:red;
+  }
+  #ball1{
+      left: 45%;
+    margin:0 auto;
+     animation-name:divdemo;
+    animation-duration:1s ;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  #ball2{
+    left:0;
+      top: 45%;
+     animation-name:divdemo2;
+    animation-duration:1s ;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+      
+  }
+  #ball3{
+      top: 45%;
+    left: 93%;
+     animation-name:divdemo3;
+    animation-duration:1s ;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  #ball4{
+      top: 85%;
+    left: 45%;
+     animation-name:divdemo1;
+    animation-duration:1s ;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes divdemo{
+    from{
+      
+      background-color: blue;
+      top:10px;
+    } 
+    to{
+      background-color: gold;
+      top:40%; 
+    } 
+   } 
+  
+  
+  @keyframes divdemo1{
+    from{
+      
+      background-color: blue;
+      
+    } 
+    to{
+      background-color: gold;
+      top:50%; 
+    } 
+   } 
+  
+  @keyframes divdemo2{
+    from{
+      
+      background-color: blue;
+      
+    } 
+    to{
+      background-color: gold;
+      left:40%; 
+    } 
+   } 
+  
+  
+  @keyframes divdemo3{
+    from{
+      
+      background-color: blue;
+      
+    } 
+    to{
+      background-color: gold;
+      left:50%;
+    } 
+   } 

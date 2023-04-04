@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: wheat;
+    height: 100vh;
+    width: 100vw;
+    background-color: #080831;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font: 2rem;
+    color: white;
+    margin:1%;
+}
+
+.inpt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+}
+.inpt input{
+    
+    height: 20%;
+    width: 30%;
+}
+
+.output-text{
+font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50%;
+    width: 100%;
+    padding: 2%;
+}

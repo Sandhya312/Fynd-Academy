@@ -1,0 +1,341 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    color: #dadaf1;
+  overflow-x: hidden;
+
+   
+}
+
+a{
+    text-decoration: none !important;
+}
+nav{
+  
+    position: fixed;
+	background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height: 4rem;
+    width: 21%;
+    padding: 1%;
+    border-style: none;
+    bottom: 15px;
+    outline-style: none;
+    left: 43%;
+    border-radius: 10rem;
+}
+nav .navbar{
+	display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+nav .navbar ul{
+    display: flex;
+    width: 100%;
+	justify-content: space-around;
+    align-items: center;
+}
+nav .navbar ul li{
+    list-style: none;
+}
+
+nav .navbar ul li .bx {
+    font-size: 1.5rem;
+	color:white;
+}
+nav .navbar ul li .bx:hover{
+	border-radius: 50%;
+	border-style: none;
+    font-size: 2rem;
+	color:rgb(191, 204, 239);
+}
+.room{
+    padding: 40px;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 2fr;
+}
+.room .room-item1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.room .room-item1 img{
+    height: 20rem;
+    animation: topBottom 4s alternate infinite;
+    margin-bottom: 25px;
+}
+@keyframes topBottom {
+    from{
+        transform: translateY(-10px);
+    }
+    to{
+        transform: translateY(30px);
+    }
+    
+}
+.room .room-item2 .aniName{
+    text-align: center;
+    padding: 14px;
+    margin-top: 90px;
+}
+.room .room-item1 .aniName h1{
+    font-size: 3rem;
+}
+
+.room .room-item2 {
+   display: grid;
+   grid-template-rows: 1fr 2fr;
+}
+.room .room-item2 div{
+   height: 100%;
+   width: 100%;
+}
+.room .room-item2 .right-part1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.room .room-item2 .right-part1 .circle{
+    display: flex;
+    height: 101px;
+    width: 130px;
+    text-align: center;
+    border-radius: 25%;
+    background-color: #dadaf1;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+}
+
+.room .room-item .right-part1 .circle {
+    color: #1A1A1D;
+}
+.room .room-item2 .right-part1 .circle:hover{
+    transform: scale(1.5);
+}
+.room .room-item2 .right-part2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.room .room-item2 .right-part2 .circleSpand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.room .room-item2 .right-part2 .circleSpand1{
+    transform: scale(0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 280px;
+    border-radius: 10px;
+    background: url(./images/popout-mid.png) repeat-x left center;
+    margin: 10px;
+    background-size: 98px 90px;
+    padding: 12px 15px;
+    font-size: 1.2em;
+    border-radius: 20%;
+   
+transition: all 1s ;
+}
+
+.room .room-item2 .right-part2 .circleSpand1 h6{
+    font-size: 1.5rem;
+    color: #1A1A1D;
+}
+
+.room .room-item2 .right-part2 .circleSpand1:hover{
+transform: scale(1.5);
+display: block !important;
+} 
+.room .room-item2 .right-part2 .circleSpand1:hover h6{
+    font-size: 1rem;
+}
+
+.room .room-item2 .right-part2 .circleSpand1 p{
+    font-size: 15px;
+    display:none;
+    color: #1A1A1D;
+}
+.room .room-item2 .right-part2 .circleSpand1:hover p{
+    display:block;
+ }
+
+.oceanDiv{
+    z-index: -2;
+    height: 500vh;
+    position: absolute;
+}
+
+  
+ .ocean {
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+   background-image:url(./images/785.jpg);
+   background-size: 100%;
+ }
+ 
+ .balls {
+   width: 30px;
+   height: 30px;
+   border-radius: 100%;
+   position: absolute;
+   background-color: white;
+   bottom: -30px;
+   opacity: 0.2;
+   animation: balls 15s ease-in-out infinite,
+     sideWays 4s ease-in-out infinite alternate;
+ }
+ 
+ @keyframes balls {
+   0% {
+     transform: translateY(0%);
+     opacity: 0.06;
+   }
+   100% {
+     transform: translateY(-120vh);
+   }
+ }
+ 
+ @keyframes sideWays {
+   0% {
+     margin-left: 0px;
+   }
+   100% {
+     margin-left: 200px;
+   }
+ }
+ 
+ .balls--1 {
+   left: 10%;
+   animation-delay: 0.5s;
+   animation-duration: 16s;
+   opacity: 0.2;
+ }
+ 
+ .balls--2 {
+   width: 15px;
+   height: 15px;
+   left: 40%;
+   animation-delay: 1s;
+   animation-duration: 10s;
+   opacity: 0.1;
+ }
+ 
+ .balls--3 {
+   width: 10px;
+   height: 10px;
+   left: 30%;
+   animation-delay: 5s;
+   animation-duration: 20s;
+   opacity: 0.3;
+ }
+ 
+ .balls--4 {
+   width: 25px;
+   height: 25px;
+   left: 40%;
+   animation-delay: 8s;
+   animation-duration: 17s;
+   opacity: 0.2;
+ }
+ 
+ .balls--5 {
+   width: 30px;
+   height: 30px;
+   left: 60%;
+   animation-delay: 10s;
+   animation-duration: 15s;
+   opacity: 0.1;
+ }
+ 
+ .balls--6 {
+   width: 10px;
+   height: 10px;
+   left: 80%;
+   animation-delay: 3s;
+   animation-duration: 30s;
+   opacity: 0.4;
+ }
+ 
+ .balls--7 {
+   width: 15px;
+   height: 15px;
+   left: 90%;
+   animation-delay: -7s;
+   animation-duration: 25s;
+   opacity: 0.3;
+ }
+ 
+ .balls--9 {
+   width: 20px;
+   height: 20px;
+   left: 50%;
+   bottom: 30px;
+   animation-delay: -5s;
+   animation-duration: 19s;
+   opacity: 0.2;
+ }
+ 
+ .balls--10 {
+   width: 40px;
+   height: 40px;
+   left: 30%;
+   bottom: 30px;
+   animation-delay: -21s;
+   animation-duration: 16s;
+   opacity: 0.3;
+ }
+ 
+ .balls--11 {
+   width: 30px;
+   height: 30px;
+   left: 60%;
+   bottom: 30px;
+   animation-delay: -13.75s;
+   animation-duration: 20s;
+   opacity: 0.3;
+ }
+ 
+ .balls--11 {
+   width: 25px;
+   height: 25px;
+   left: 90%;
+   bottom: 30px;
+   animation-delay: -10.5s;
+   animation-duration: 19s;
+   opacity: 0.3;
+ }
+ 
+
+
+
